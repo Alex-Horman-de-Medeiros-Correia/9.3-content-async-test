@@ -1,4 +1,4 @@
-const fetchCharacter = async (id) => {
+/* const fetchCharacter = async (id) => {
   // Recebemos como parâmetro o id
   try {
     const URL = `https://www.superheroapi.com/api.php/4192484924171229/${id}`;
@@ -14,17 +14,17 @@ const fetchCharacter = async (id) => {
     // capturamos e retornamos essa exceção.
     return error;
   }
-};
+}; */
 
-// const fetchCharacter = async (id) => {
-//   const URL = `https://www.superheroapi.com/api.php/4192484924171229/${id}`;
-//   const promise = fetch(URL)
-//     .then((response) => response.json())
-//     .then((result) => result)
-//     .catch((error) => error);
+ const fetchCharacter = async (id) => {
+   const URL = `https://www.superheroapi.com/api.php/4192484924171229/${id}`;
+   const promise = fetch(URL)
+     .then((response) => response.json())
+     .then((result) => result)
+     .catch((error) => error);
 
-//     return promise;
-// };
+     return promise;
+ };
 
 module.exports = {
   fetchCharacter,
